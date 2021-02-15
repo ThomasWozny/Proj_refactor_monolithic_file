@@ -1,0 +1,27 @@
+/*
+ * constants.h
+ *
+ *  Created on: Feb 15, 2021
+ *      Author: tommywozny
+ */
+
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+#include <string>
+
+const std::string SOURCE_FILE 	= "source_file.txt";
+const std::string RESULTS_FILE 	= "results_file.txt";
+
+const int 			EMPTY			 				=  0;
+const int 			SUCCESS			 				=  0;
+const int 			FAIL							=  SUCCESS - 1;
+const int 			COULD_NOT_OPEN_FILE				=  SUCCESS - 2;
+const int 			NO_DATA_TO_WORK_ON				=  SUCCESS - 3;
+const int			UNIMPLEMENTED					=  SUCCESS - 4;
+const int			UNINITIALIZED					=  SUCCESS - 5;
+
+enum SORT_ORDER { PROCESS_NUMBER, CPU_TIME, START_TIME };
+struct process{	int process_number=UNINITIALIZED;
+				int cpu_time=UNINITIALIZED;
+				int start_time=UNINITIALIZED;};
+#endif
